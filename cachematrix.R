@@ -31,7 +31,7 @@ cacheSolve <- function(x, ...) {
     # If we got this far, it's not cached.
 	message("calculating and caching new inverse")
 	data <- x$get()
-	i <- solve(data)
+	i <- solve(data, ...)
 	x$setinverse(i)
 	i
 }
